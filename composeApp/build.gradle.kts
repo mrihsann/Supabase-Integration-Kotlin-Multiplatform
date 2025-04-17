@@ -34,7 +34,12 @@ kotlin {
             implementation(libs.androidx.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.kotlinx.coroutines.android)
+
+            //Ktor
             implementation(libs.ktor.client.cio)
+
+            //Android
+            implementation(libs.koin.android)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -47,12 +52,19 @@ kotlin {
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.serialization)
 
+            //Supabase
             implementation(project.dependencies.platform(libs.supabase.bom))
             implementation(libs.supabase.postgrest.kt)
             implementation(libs.supabase.auth.kt)
             implementation(libs.supabase.realtime.kt)
+
+            //Koin
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
         }
         iosMain.dependencies {
+            //Ktor
             implementation(libs.ktor.client.darwin)
         }
     }
