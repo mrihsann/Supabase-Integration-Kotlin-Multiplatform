@@ -36,7 +36,7 @@ kotlin {
             implementation(libs.kotlinx.coroutines.android)
 
             //Ktor
-            implementation(libs.ktor.client.cio)
+            implementation(libs.ktor.client.android)
 
             //Android
             implementation(libs.koin.android)
